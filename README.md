@@ -13,3 +13,5 @@ shiny::runApp('WAT-a-game')
 ## Pense pas bête
 
 Les informations pour confiture RStudio dans le but de se connecter à shinyapp.io sont disponibles ici : [http://shiny.rstudio.com/articles/shinyapps.html](http://shiny.rstudio.com/articles/shinyapps.html).
+
+Pour faire la mise à jour d'un dépot sur shinyapp.io, il est necessaire de charger le package `rsconnect`.
