@@ -1,5 +1,6 @@
 library(shiny)
 require(reshape2)
+require(ggplot2)
 require(ineq)
 
 
@@ -46,6 +47,8 @@ shinyServer(function(input, output) {
   tableauWat<-reactive({
     if(input$calcul){
       mini_df <- Dataset()[,(input$nb_joueurs + 2):length(Dataset())]
+      mini_df$pct_out <- mini_df[,3] * 100 / mini_df[,2]
+      mini_df$pct_durty <- mini_df[,4] * 100 / mini_df[,3]
       return(mini_df)
     }
     else
@@ -61,7 +64,7 @@ shinyServer(function(input, output) {
       s1.m <- melt(tableauJoueurs(), c("X","Saison" ))
       gg1 <- ggplot(data = s1.m)+
         geom_boxplot(aes(x = as.factor(X), y = value, fill = Saison))+
-        labs(x = "", y = "revenu par tour", title = date.v)
+        labs(x = "", y = "revenu par tour", title = input$text)
       return(gg1)
       
     }else{
