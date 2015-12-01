@@ -1,0 +1,7 @@
+,J1,J2,J3,J4,J5,J6,J7,J8,Saison,Eau init,Eau Out,Eau Sale Out,Politique,
+Tour 1,8,9,7,8,10,7,9,6,Humide,46,21,6,NA,
+Tour 2,10,9,7,8,7,7,9,6,Sèche,24,2,0,NA,
+Tour 3,10,9,9,8,7,7,9,8,Normale,34,15,7,NA,
+Tour 4,10,9,5,9,5,11,9,8,Sèche,24,9,2,NA,
+Tour 5,10,9,9,9,9,11,9,8,Normale,34,14,5,Debit mini,Mini 1/2 ou 1/4 si propre
+Tour 6,10,9,7,9,6,11,4,8,Sèche,24,5,3,Sociale,
