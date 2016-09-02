@@ -15,7 +15,7 @@ shinyServer(function(input, output) {
     }
     
      Dataset<-as.data.frame(read.csv(input$file$datapath, header=input$entete, sep=input$sep, 
-             quote=input$quote) )
+             quote=input$quote, fileEncoding=input$encod) ) ##Ici on lit le fichier encoding="utf-8"
     return(Dataset)
   })
   output$tableau <- renderTable({return(Dataset()) })
